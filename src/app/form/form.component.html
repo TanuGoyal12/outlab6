@@ -1,1 +1,104 @@
-<p>form works!</p>
+<!-- <form [formGroup]="profileForm">
+  
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName">
+  </label>
+
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName">
+  </label>
+  </form>
+<p>{{ profileForm.get('firstname').value }}</p> -->
+<!-- <form [formGroup]="loginForm">
+  <label for="username">username</label>
+  <input type="text" name="username" id="username" [formControl]="username">
+  <br>
+
+  <label for="password">password</label>
+  <input type="password" name="password" id="password" [formControl]="password">
+  <br>
+  <button type="submit">log in</button>
+</form> -->
+<form [formGroup]="form" (ngSubmit)="submitFunc()">
+	<div>
+	<label for="name">
+      Name
+
+    </label>
+  <input name="name" formControlName="name" [(ngModel)]="arr.name"/>
+</div>
+<div>
+  <label for="email">
+      Email
+    </label>
+  <input name="email" formControlName="email" [(ngModel)]="arr.email"/>
+</div>
+    <div>
+    	Feedback
+    	<p></p>
+    <label>
+      <input type="radio" value="Great" name="feedback" formControlName="feedback" [(ngModel)]="arr.feedback">
+      Great
+    </label>
+
+    <p>
+      <input type="radio" value="Okay" name="feedback" formControlName="feedback" [(ngModel)]="arr.feedback">
+      Okay
+   </p>
+       <label>
+      <input type="radio" value="Not Good" name="feedback" formControlName="feedback" [(ngModel)]="arr.feedback">
+      Not Good
+    </label>
+  </div>
+  <div>
+    <label for="comment">
+      Comments
+    </label>
+    <p></p>
+<!--     <input type="text" name="comments" formControlName="comments" [(ngModel)]="arr.comments"/> -->
+    <textarea type="text" name="comment" formControlName="comment" [(ngModel)]="arr.comment"></textarea>
+</div>
+<button type="submit">Submit</button>
+</form>
+<p>Name: {{arr.name}}</p>
+<p>Email: {{arr.email}}</p>
+<p>Feedback: {{arr.feedback}}</p>
+<p>Comment: {{arr.comment}}</p>
+
+<p id="validation"></p>
+<!-- <p>{{form.value.name}}
+</p> -->
+<!-- <p>{{this.sr}}</p> -->
+<!-- <p>{{this.li}}</p> -->
+<!-- <p>{{this.lis.name}}</p> -->
+<!-- <p>{{lis.name}}</p> -->
+<!-- <p *ngFor="let e of lis;"> 
+	{{e.name}}
+</p> -->
+<!-- <p>{{lis}}</p> -->
+<!-- <h1>Registered Employees</h1> 
+<div class="d-flex justify-content-center"> 
+<div class="spinner-border" role="status" > 
+	<span class="sr-only" id="loading">Loading...</span> 
+</div> 
+</div> 
+<table class="table" id='tab'> 
+	<thead> 
+	<tr> 
+		<th scope="col">Name</th> 
+		<th scope="col">Position</th> 
+		<th scope="col">Office</th> 
+		<th scope="col">Salary</th> 
+	</tr> 
+	</thead> 
+	<tbody> 
+	<tr *ngFor="let e of lis;"> 
+		<td>{{ e.name }}</td> 
+		<td>{{ e.email }}</td> 
+		<td>{{ e.feedback }}</td> 
+		<td>{{ e.comment }}</td> 
+	</tr> 
+	</tbody> 
+</table>				 -->	 
