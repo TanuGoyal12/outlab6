@@ -21,17 +21,19 @@ export class FormComponent implements OnInit{
     });
 
     
-     this.dataservice.getConfig() 
+ 
+    // this.ngOnInit();
+
+  }
+   ngOnInit(): void { 
+         this.dataservice.getConfig() 
     .subscribe( Response => { 
 this.arr.email=Response.email;
 this.arr.comment=Response.comment;
 this.arr.feedback=Response.feedback;
       this.arr.name = Response.name;
     }); 
-    // this.ngOnInit();
 
-  }
-   ngOnInit(): void { 
 
  }
 
